@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #EFEEEE !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    font-family: 'Montserrat',
+    sans-serif !important;
+    margin: auto !important;
+    height: 95vh !important;
+}
+
+h1 {
+    background: linear-gradient(118.06deg, #FF2929 -145.91%, rgba(255, 130, 103, 0.59) 167.08%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-family: SF Pro Text !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.03em !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    font-size: 2.1em !important;
+}
+
+h2 {
+    width: 78% !important;
+    text-align: center !important;
+    font-family: 'Montserrat',
+    sans-serif !important;
+    color: #ff5c3896 !important;
+    font-size: 0.8em !important;
+    font-weight:800 !important;
+    border-bottom: 1px solid #aeaeae !important;
+    line-height: 0.1em !important;
+    margin: 10px 0 20px !important;
+}
+
+h2 span {
+    background: #EFEEEE !important;
+    padding: 0 10px !important;
+}
+
+h6{
+    font-family: 'Montserrat',
+    sans-serif !important;
+    color: rgba(134, 202, 224, 1) !important;
+    margin-top: 2.5em !important;
+    font-size: 0.75em !important;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+span {
+    font-size: 12px;
+}
+
+input {
+    background: #EFEEEE !important;
+    box-shadow: inset -6px -6px 16px rgba(255, 255, 255, 0.5),
+        inset 6px 6px 16px rgba(209, 205, 199, 0.5) !important;
+    border-radius: 20px !important;
+    border: 0px !important;
+    padding: 12px 15px !important;
+    margin: 8px 0 !important;
+    width: 80% !important;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+.forgot{
+    color: rgba(134, 202, 224, 1);
+    font-size: 1.1em;
+}
+
+.create{
+    color: #aeaeae;
+    font-size: 1.1em !important;
+}
+
+.createacc{
+    margin: 0 !important;
+    font-family: 'Montserrat',
+    sans-serif !important;
+    font-size: 0.8em !important;
+    color: rgba(174, 174, 174, 1);
+}
+
+.OR {
+    font-family: 'Montserrat',
+    sans-serif !important;
+    color: #ff5c3896 !important;
+    font-size: 1.1em !important;
+    font-weight:800 !important;
+}
+
+.rightpanel {
+    background: #EFEEEE !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    padding: 0 50px !important;
+    height: 100% !important;
+    text-align: center !important;
+}
+
+::placeholder {
+    font-family: 'Montserrat',
+    sans-serif !important;
+    color: #aeaeae;
+}
+
+.container {
+    background: #EFEEEE !important;
+    opacity: 0.9 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 10px 10px 16px rgba(209, 205, 199, 0.5),
+    -10px -10px 16px rgba(255, 255, 255, 0.5) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    width: 768px !important;
+    max-width: 100% !important;
+    min-height: 480px !important;
+}
+
+.form-container {
+    position: absolute !important;
+    top: 0 !important;
+    height: 100% !important;
+}
+
+.log-in-container {
+    right:0 !important;
+    width: 50% !important;
+    z-index: 2 !important;
+}
+
+.overlay-right {
+    left: 0 !important;
+}
+
+.overlay-container {
+    position: absolute ;
+    top: 0 !important;
+    left: 50% !important;
+    width: 50% !important;
+    height: 100% !important;
+}
+
+.overlay {
+    position: relative;
+    left: -100% !important;
+    height: 100% !important;
+    width: 200% !important;
+}
+
+.overlay-panel {
+    background-image: url('https://images.unsplash.com/photo-1580508244245-c446ca981a6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80');
+    background-size:auto !important;
+    position: absolute !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    padding: 0 40px !important;
+    text-align: center !important;
+    top: 0 !important;
+    height: 100% !important;
+    width: 50% !important;
+}
+
+.social-container {
+    margin: 35px 0 !important;
+    margin-bottom: 20px !important;
+}
+
+.social-container i{
+    margin-right: 0.4em !important;
+}
+
+.social-container button {
+    color: #aeaeae;
+    border: 0px;
+    background: #EFEEEE;
+    box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.5),
+    6px 6px 16px rgba(209, 205, 199, 0.5);
+    border-radius: 20px;
+    padding: 12px 45px;
+    font-size: 0.85em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    height: 40px;
+    width: 103px;
+}
+
+.social-container button:hover {
+    background: #EFEEEE;
+    box-shadow: inset -6px -6px 16px rgba(255, 255, 255, 0.5),
+    inset 6px 6px 16px rgba(209, 205, 199, 0.5);
+    border-radius: 20px;
+}
+
+.login {
+    background: linear-gradient(102.88deg, rgba(255, 41, 41, 0.5) 33.88%, rgba(255, 130, 103, 0.295) 171.9%);
+    box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.5),
+    6px 6px 16px rgba(209, 205, 199, 0.5) !important;
+    border-radius: 20px !important;
+    border: 0 !important;
+    color: #FFFFFF !important;
+    padding: 12px 45px !important;
+    font-size: 0.85em !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 0.5em !important;
+    height: 40px !important;
+    width: 223px !important;
+    font-family: 'Montserrat' !important;
+}
+
+.login:hover {
+    background: linear-gradient(102.88deg, rgba(255, 41, 41, 0.5) 33.88%, rgba(255, 130, 103, 0.295) 171.9%) !important;
+    box-shadow: inset -6px -6px 16px #ffa1a1,
+        inset 6px 6px 16px #d27777 !important;
+    border-radius: 20px !important;
+}
