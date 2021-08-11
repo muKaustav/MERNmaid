@@ -15,13 +15,13 @@ function Signup () {
               <form>
                 <button
                   className='social google'
-                  formAction='http://localhost:5000/auth/google'
+                  formAction='https://mernmaid.herokuapp.com/auth/google'
 								>
                   <img src={googleImg} height='25' width='25' alt='google' />
                 </button>
                 <button
                   className='social github'
-                  formAction='http://localhost:5000/auth/google'
+                  formAction='https://mernmaid.herokuapp.com/auth/google'
 								>
                   <img src={githubImg} height='25' width='25' alt='github' />
                 </button>
@@ -30,7 +30,10 @@ function Signup () {
             <h2>
               <span>OR</span>
             </h2>
-            <form action='http://localhost:5000/register' method='POST'>
+            <form
+              action='https://mernmaid.herokuapp.com/register'
+              method='POST'
+						>
               <input
                 required
                 type='email'
