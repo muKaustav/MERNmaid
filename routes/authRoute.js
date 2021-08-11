@@ -1,5 +1,6 @@
 const express = require('express')
 const passport = require('passport')
+const authRoute = require('../controllers/authController')
 router = express.Router()
 
 router.get(
@@ -14,5 +15,7 @@ router.get(
   res.redirect('/dashboard')
 }
 )
+
+router.post('/auth/android/google', authRoute.googlePost)
 
 module.exports = router
