@@ -59,7 +59,7 @@ function Signup () {
             </h6>
             <h5 className='createacc'>
               <span className='OR'>Already have an account? </span>
-              <Link to='/login' className='create'>
+              <Link to='/' className='create'>
 								Log In.
 							</Link>
             </h5>

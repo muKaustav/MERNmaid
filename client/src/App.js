@@ -8,8 +8,8 @@ function App () {
   return (
     <BrowserRouter>
       <Switch>
+        <Route path='/' exact component={Login} />
         <Route path='/dashboard' exact component={Dashboard} />
-        <Route path='/login' exact component={Login} />
         <Route path='/register' exact component={Signup} />
       </Switch>
     </BrowserRouter>

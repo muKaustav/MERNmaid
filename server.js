@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const path = require('path')
 const passport = require('passport')
 const cookieSession = require('cookie-session')
 const userRoute = require('./routes/userRoute')
@@ -8,6 +9,8 @@ const bodyParser = require('body-parser')
 require('./passport')
 
 const app = express()
+
+app.use(express.static(path.join(__dirname, 'client', 'build')))
 app.use(
 	bodyParser.urlencoded({
   extended: true
@@ -26,6 +29,10 @@ app.use(passport.session())
 
 app.use('/', userRoute)
 app.use('/', authRoute)
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+})
 
 PORT = process.env.PORT || 5000
 
