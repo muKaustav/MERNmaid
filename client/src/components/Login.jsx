@@ -30,7 +30,7 @@ function Login () {
             <h2>
               <span>OR</span>
             </h2>
-            <form action='http://localhost:5000/login' method='POST'>
+            <form action='http://localhost:5000' method='POST'>
               <input
                 required
                 type='email'
