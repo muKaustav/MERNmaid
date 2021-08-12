@@ -1,6 +1,7 @@
 require('dotenv').config()
 const passport = require('passport')
 const mongoose = require('mongoose')
+const jwt = require('jsonwebtoken')
 const userSchema = require('./models/userSchema')
 const passportLocalMongoose = require('passport-local-mongoose')
 const GoogleStrategy = require('passport-google-oauth20').Strategy
@@ -48,6 +49,13 @@ passport.use(
       githubId: '-1'
     },
 				(err, user) => {
+  const token = jwt.sign(
+    {
+      id: profile.id
+    },
+						process.env.JWT_SECRET
+					)
+  res.cookie('token', token, { maxAge: 900000, httpOnly: true })
   return cb(err, user)
 }
 			)
