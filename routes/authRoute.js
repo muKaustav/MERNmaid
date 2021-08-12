@@ -1,5 +1,6 @@
 const express = require('express')
 const passport = require('passport')
+var deeplink = require('node-deeplink')
 const authRoute = require('../controllers/authController')
 router = express.Router()
 
@@ -25,7 +26,12 @@ router.get(
 	'/auth/github/dashboard',
 	passport.authenticate('github', { failureRedirect: '/failed' }),
 	(req, res) => {
-  res.redirect('/callback')
+  res.redirect(
+			'/callback',
+			deeplink({
+  fallback: 'https://mernmaid.herokuapp.com/login'
+})
+		)
 }
 )
 
