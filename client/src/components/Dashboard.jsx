@@ -2,7 +2,9 @@ import React from 'react'
 import '../styles/dashboard.css'
 
 function Dashboard () {
-  return <div />
+  return <div>
+    <h1>hello world</h1>
+  </div>
 }
 
 export default Dashboard
