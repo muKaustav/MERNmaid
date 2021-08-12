@@ -7,7 +7,7 @@ router = express.Router()
 router.post('/', passport.login)
 router.post('/register', passport.register)
 router.get('/dashboard', userRoute.checkUserLoggedIn, (req, res) => {
-  res.redirect(process.env.CLIENT_HOME_URL)
+  return res.redirect(process.env.CLIENT_HOME_URL)
 })
 router.post('/logout', passport.logout)
 
