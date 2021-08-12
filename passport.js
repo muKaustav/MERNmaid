@@ -43,9 +43,9 @@ passport.use(
   User.findOrCreate(
     {
       Name: profile.displayName,
+      Password: '-1',
       googleId: profile.id,
-      githubId: '-1',
-      password: '-1'
+      githubId: '-1'
     },
 				(err, user) => {
   return cb(err, user)
@@ -66,9 +66,9 @@ passport.use(
   User.findOrCreate(
     {
       Name: profile.displayName,
-      githubId: profile.id,
+      Password: '-1',
       googleId: '-1',
-      password: '-1'
+      githubId: profile.id
     },
 				(err, user) => {
   return done(err, user)

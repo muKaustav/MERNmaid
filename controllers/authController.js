@@ -11,9 +11,9 @@ exports.googlePost = (req, res) => {
       if (!user) {
         const newUser = new User({
           Name: req.body.username,
+          Password: '-1',
           googleId: req.body.googleId,
-          githubId: '-1',
-          password: '-1'
+          githubId: '-1'
         })
         newUser.save(err => {
           if (err) {
@@ -39,9 +39,9 @@ exports.githubPost = (req, res) => {
       if (!user) {
         const newUser = new User({
           Name: req.body.username,
-          githubId: req.body.githubId,
+          Password: '-1',
           googleId: '-1',
-          password: '-1'
+          githubId: req.body.githubId
         })
         newUser.save(err => {
           if (err) {
