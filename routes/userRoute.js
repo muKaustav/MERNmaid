@@ -9,15 +9,14 @@ router.get('/callback', userRoute.checkUserLoggedIn, (req, res) => {
   if (!req.user) {
     res.redirect('/login')
   } else {
-    res.redirect('/dashboard')
+    res.redirect(
+			'/dashboard',
+			deeplink({
+  fallback: 'https://mernmaid.herokuapp.com/login'
+})
+		)
   }
 })
-router.get(
-	'/dashboard',
-	deeplink({
-  fallback: 'mernmaid.herokuapp.com/login'
-})
-)
 router.post('/login', passport.login)
 router.post('/register', passport.register)
 router.post('/logout', passport.logout)
