@@ -41,7 +41,7 @@ passport.use(
   },
 		(accessToken, refreshToken, profile, cb) => {
   User.findOrCreate(
-				{ username: profile.displayName, googleId: profile.id },
+				{ username: profile.displayName, googleId: profile.id, githubId: '-1' },
 				(err, user) => {
   return cb(err, user)
 }
@@ -59,7 +59,7 @@ passport.use(
   },
 		(accessToken, refreshToken, profile, done) => {
   User.findOrCreate(
-				{ username: profile.displayName, githubId: profile.id },
+				{ username: profile.displayName, githubId: profile.id, googleId: '-1' },
 				(err, user) => {
   return done(err, user)
 }
