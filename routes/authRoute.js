@@ -1,6 +1,7 @@
 const express = require('express')
 const passport = require('passport')
 const authRoute = require('../controllers/authController')
+
 router = express.Router()
 
 router.get(
@@ -12,7 +13,7 @@ router.get(
 	'/auth/google/dashboard',
 	passport.authenticate('google', { failureRedirect: '/failed' }),
 	(req, res) => {
-  res.redirect('/callback')
+  res.redirect('/dashboard')
 }
 )
 
@@ -25,7 +26,7 @@ router.get(
 	'/auth/github/dashboard',
 	passport.authenticate('github', { failureRedirect: '/failed' }),
 	(req, res) => {
-  res.redirect('/callback')
+  res.redirect('/dashboard')
 }
 )
 

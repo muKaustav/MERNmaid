@@ -9,7 +9,6 @@ function App () {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/callback' exact component={Callback} />
         <Route path='/dashboard' exact component={Dashboard} />
         <Route path='/login' exact component={Login} />
         <Route path='/register' exact component={Signup} />
