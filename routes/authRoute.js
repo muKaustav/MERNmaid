@@ -16,6 +16,21 @@ router.get(
 }
 )
 
+router.get(
+	'/auth/github',
+	passport.authenticate('github', { scope: ['user:email'] })
+)
+
+router.get(
+	'/auth/github/dashboard',
+	passport.authenticate('github', { failureRedirect: '/failed' }),
+	(req, res) => {
+  res.redirect('/dashboard')
+}
+)
+
 router.post('/auth/android/google', authRoute.googlePost)
+
+router.post('/auth/android/github', authRoute.githubPost)
 
 module.exports = router

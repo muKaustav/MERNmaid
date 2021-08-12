@@ -21,7 +21,7 @@ function Login () {
                 </button>
                 <button
                   className='social github'
-                  formAction='https://mernmaid.herokuapp.com/auth/google'
+                  formAction='https://mernmaid.herokuapp.com/auth/github'
 								>
                   <img src={githubImg} height='25' width='25' alt='github' />
                 </button>
@@ -30,10 +30,7 @@ function Login () {
             <h2>
               <span>OR</span>
             </h2>
-            <form
-              action='https://mernmaid.herokuapp.com'
-              method='POST'
-						>
+            <form action='https://mernmaid.herokuapp.com' method='POST'>
               <input
                 required
                 type='email'

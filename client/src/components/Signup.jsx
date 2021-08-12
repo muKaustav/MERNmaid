@@ -21,7 +21,7 @@ function Signup () {
                 </button>
                 <button
                   className='social github'
-                  formAction='https://mernmaid.herokuapp.com/auth/google'
+                  formAction='https://mernmaid.herokuapp.com/auth/github'
 								>
                   <img src={githubImg} height='25' width='25' alt='github' />
                 </button>

@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const userSchema = require('./models/userSchema')
 const passportLocalMongoose = require('passport-local-mongoose')
 const GoogleStrategy = require('passport-google-oauth20').Strategy
+const GitHubStrategy = require('passport-github2').Strategy
 const findOrCreate = require('mongoose-findorcreate')
 
 mongoose.connect(process.env.DB_URI, {
@@ -36,13 +37,31 @@ passport.use(
   {
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: process.env.CALLBACK_URL
+    callbackURL: process.env.GOOGLE_CALLBACK_URL
   },
-		function (accessToken, refreshToken, profile, cb) {
+		(accessToken, refreshToken, profile, cb) => {
   User.findOrCreate(
 				{ username: profile.displayName, googleId: profile.id },
 				(err, user) => {
   return cb(err, user)
+}
+			)
+}
+	)
+)
+
+passport.use(
+	new GitHubStrategy(
+  {
+    clientID: process.env.GITHUB_CLIENT_ID,
+    clientSecret: process.env.GITHUB_CLIENT_SECRET,
+    callbackURL: process.env.GITHUB_CALLBACK_URL
+  },
+		(accessToken, refreshToken, profile, done) => {
+  User.findOrCreate(
+				{ username: profile.displayName, githubId: profile.id },
+				(err, user) => {
+  return done(err, user)
 }
 			)
 }
