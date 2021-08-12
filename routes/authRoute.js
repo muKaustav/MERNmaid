@@ -31,5 +31,6 @@ router.get(
 )
 
 router.post('/auth/android/google', authRoute.googlePost)
+router.post('/auth/android/github', authRoute.githubPost)
 
 module.exports = router

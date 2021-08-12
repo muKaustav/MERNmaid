@@ -10,8 +10,10 @@ exports.googlePost = (req, res) => {
     } else {
       if (!user) {
         const newUser = new User({
-          username: req.body.username,
-          googleId: req.body.googleId
+          Name: req.body.username,
+          googleId: req.body.googleId,
+          githubId: '-1',
+          password: '-1'
         })
         newUser.save(err => {
           if (err) {
@@ -36,8 +38,10 @@ exports.githubPost = (req, res) => {
     } else {
       if (!user) {
         const newUser = new User({
-          username: req.body.username,
-          githubId: req.body.githubId
+          Name: req.body.username,
+          githubId: req.body.githubId,
+          googleId: '-1',
+          password: '-1'
         })
         newUser.save(err => {
           if (err) {
