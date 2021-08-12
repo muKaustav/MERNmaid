@@ -21,7 +21,6 @@
     "express": "^4.17.1",
     "mongoose": "^5.13.5",
     "mongoose-findorcreate": "^3.0.0",
-    "node-deeplink": "^0.6.0",
     "nodemon": "^2.0.12",
     "passport": "^0.4.1",
     "passport-github2": "^0.1.12",
