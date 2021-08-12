@@ -4,11 +4,15 @@ const userRoute = require('../controllers/userController')
 const passport = require('../passport')
 router = express.Router()
 
-router.post('/', passport.login)
-router.post('/register', passport.register)
-router.get('/dashboard', userRoute.checkUserLoggedIn, (req, res) => {
-  res.redirect(process.env.CLIENT_HOME_URL)
+router.get('/callback', userRoute.checkUserLoggedIn, (req, res) => {
+  if (!req.user) {
+    res.redirect('/login')
+  } else {
+    res.redirect('/dashboard')
+  }
 })
+router.post('/login', passport.login)
+router.post('/register', passport.register)
 router.post('/logout', passport.logout)
 
 module.exports = router

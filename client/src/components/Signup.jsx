@@ -13,16 +13,10 @@ function Signup () {
             <h1>Sign Up</h1>
             <div className='social-container'>
               <form>
-                <button
-                  className='social google'
-                  formAction='https://mernmaid.herokuapp.com/auth/google'
-								>
+                <button className='social google' formAction='/auth/google'>
                   <img src={googleImg} height='25' width='25' alt='google' />
                 </button>
-                <button
-                  className='social github'
-                  formAction='https://mernmaid.herokuapp.com/auth/github'
-								>
+                <button className='social github' formAction='/auth/github'>
                   <img src={githubImg} height='25' width='25' alt='github' />
                 </button>
               </form>
@@ -30,10 +24,7 @@ function Signup () {
             <h2>
               <span>OR</span>
             </h2>
-            <form
-              action='https://mernmaid.herokuapp.com/register'
-              method='POST'
-						>
+            <form action='/register' method='POST'>
               <input
                 required
                 type='email'

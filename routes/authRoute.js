@@ -12,7 +12,7 @@ router.get(
 	'/auth/google/dashboard',
 	passport.authenticate('google', { failureRedirect: '/failed' }),
 	(req, res) => {
-  res.redirect('/dashboard')
+  res.redirect('/callback')
 }
 )
 
@@ -25,12 +25,10 @@ router.get(
 	'/auth/github/dashboard',
 	passport.authenticate('github', { failureRedirect: '/failed' }),
 	(req, res) => {
-  res.redirect('/dashboard')
+  res.redirect('/callback')
 }
 )
 
 router.post('/auth/android/google', authRoute.googlePost)
-
-router.post('/auth/android/github', authRoute.githubPost)
 
 module.exports = router
