@@ -29,7 +29,7 @@ function Signup () {
                 required
                 type='email'
                 placeholder='Enter Email'
-                name='username'
+                name='email'
 							/>
               <input
                 required
@@ -53,7 +53,7 @@ function Signup () {
             </h6>
             <h5 className='createacc'>
               <span className='OR'>Already have an account? </span>
-              <Link to='/' className='create'>
+              <Link to='/login' className='create'>
 								Log In.
 							</Link>
             </h5>

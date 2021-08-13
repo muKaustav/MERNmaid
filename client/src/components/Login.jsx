@@ -29,7 +29,7 @@ function Login () {
                 required
                 type='email'
                 placeholder='Enter Email'
-                name='username'
+                name='email'
 							/>
               <input
                 required

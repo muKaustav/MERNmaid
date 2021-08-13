@@ -2,7 +2,6 @@ import React from 'react'
 import Login from './components/Login.jsx'
 import Signup from './components/Signup.jsx'
 import Dashboard from './components/Dashboard.jsx'
-import Callback from './components/Callback.jsx'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 function App () {

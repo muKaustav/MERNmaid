@@ -79,25 +79,21 @@ passport.use(
 )
 
 exports.register = (req, res) => {
-  User.register(
-		{ username: req.body.username },
-		req.body.password,
-		(err, user) => {
-  if (err) {
-    console.log(err)
-    res.redirect(process.env.CLIENT_SIGNUP_URL)
-  } else {
-    passport.authenticate('local')(req, res, () => {
-      res.redirect('/dashboard')
-    })
-  }
-}
-	)
+  User.register({ email: req.body.email }, req.body.password, (err, user) => {
+    if (err) {
+      console.log(err)
+      res.redirect(process.env.CLIENT_SIGNUP_URL)
+    } else {
+      passport.authenticate('local')(req, res, () => {
+        res.redirect('/dashboard')
+      })
+    }
+  })
 }
 
 exports.login = (req, res) => {
   let user = new User({
-    username: req.body.username,
+    email: req.body.email,
     password: req.body.password
   })
 
