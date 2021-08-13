@@ -13,7 +13,6 @@ router.get(
 	'/auth/google/dashboard',
 	passport.authenticate('google', { failureRedirect: '/failed' }),
 	(req, res) => {
-  console.log(req.user)
   res.redirect('/dashboard')
 }
 )
