@@ -5,3 +5,7 @@ exports.checkUserLoggedIn = (req, res, next) => {
     res.redirect('/login')
   }
 }
+
+exports.getUser = (req, res) => {
+  res.send(req.user)
+}

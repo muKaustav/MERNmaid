@@ -48,7 +48,11 @@ passport.use(
       githubId: '-1'
     },
 				(err, user) => {
-  return cb(err, user)
+  if (err) {
+    console.log(err)
+  } else {
+    return cb(err, user)
+  }
 }
 			)
 }
@@ -71,7 +75,11 @@ passport.use(
       githubId: profile.id
     },
 				(err, user) => {
-  return done(err, user)
+  if (err) {
+    console.log(err)
+  } else {
+    return cb(err, user)
+  }
 }
 			)
 }

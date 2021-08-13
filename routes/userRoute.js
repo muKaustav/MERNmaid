@@ -5,6 +5,7 @@ const passport = require('../passport')
 
 router = express.Router()
 
+router.get('/getUser', userRoute.getUser)
 router.get('/dashboard', userRoute.checkUserLoggedIn)
 router.get('/logout', passport.logout)
 router.post('/login', passport.login)
