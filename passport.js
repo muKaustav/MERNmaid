@@ -71,7 +71,7 @@ passport.use(
       githubId: profile.id
     },
 				(err, user) => {
-  return cb(err, user)
+  return done(err, user)
 }
 			)
 }
