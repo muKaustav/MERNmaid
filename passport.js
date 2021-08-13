@@ -1,6 +1,7 @@
 require('dotenv').config()
 const passport = require('passport')
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 const userSchema = require('./models/userSchema')
 const passportLocalMongoose = require('passport-local-mongoose')
 const GoogleStrategy = require('passport-google-oauth20').Strategy
@@ -79,21 +80,25 @@ passport.use(
 )
 
 exports.register = (req, res) => {
-  User.register({ email: req.body.email }, req.body.password, (err, user) => {
-    if (err) {
-      console.log(err)
-      res.redirect(process.env.CLIENT_SIGNUP_URL)
-    } else {
-      passport.authenticate('local')(req, res, () => {
-        res.redirect('/dashboard')
-      })
-    }
-  })
+  User.register(
+		{ email: req.body.username },
+		req.body.password,
+		(err, user) => {
+  if (err) {
+    console.log(err)
+    res.redirect(process.env.CLIENT_SIGNUP_URL)
+  } else {
+    passport.authenticate('local')(req, res, () => {
+      res.redirect('/dashboard')
+    })
+  }
+}
+	)
 }
 
 exports.login = (req, res) => {
   let user = new User({
-    email: req.body.email,
+    email: req.body.username,
     password: req.body.password
   })
 

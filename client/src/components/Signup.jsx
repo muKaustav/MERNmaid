@@ -29,7 +29,7 @@ function Signup () {
                 required
                 type='email'
                 placeholder='Enter Email'
-                name='email'
+                name='username'
 							/>
               <input
                 required
