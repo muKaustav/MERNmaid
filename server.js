@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
@@ -20,7 +21,7 @@ app.use(cors())
 app.use(
 	cookieSession({
   name: 'session',
-  keys: ['key1', 'key2']
+  keys: [process.env.KEY1, process.env.KEY2]
 })
 )
 
