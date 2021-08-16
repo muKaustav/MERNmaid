@@ -71,7 +71,7 @@ passport.use(
       Email: profile.emails[0].value,
       googleId: '-1',
       githubId: profile.id,
-      thumbnail: profile._json['picture']
+      thumbnail: profile.profileUrl
     },
 				(err, user) => {
   return done(err, user)
