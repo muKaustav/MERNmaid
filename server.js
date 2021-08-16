@@ -7,6 +7,7 @@ const cookieSession = require('cookie-session')
 const userRoute = require('./routes/userRoute')
 const authRoute = require('./routes/authRoute')
 const bodyParser = require('body-parser')
+const flash = require('req-flash')
 require('./passport')
 
 const app = express()
@@ -30,6 +31,7 @@ app.all('/*', (req, res, next) => {
   next()
 })
 
+app.use(flash())
 app.use(passport.initialize())
 app.use(passport.session())
 

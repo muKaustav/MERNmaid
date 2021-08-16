@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const userSchema = require('../models/userSchema')
+const userSchema = require('../models/userAuth')
 
 exports.googlePost = (req, res) => {
   const User = mongoose.model('User', userSchema)

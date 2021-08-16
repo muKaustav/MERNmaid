@@ -27,6 +27,12 @@ function Signup () {
             <form action='/register' method='POST'>
               <input
                 required
+                type='text'
+                placeholder='Enter Name'
+                name='name'
+							/>
+              <input
+                required
                 type='email'
                 placeholder='Enter Email'
                 name='username'

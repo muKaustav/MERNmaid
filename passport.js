@@ -1,12 +1,12 @@
 require('dotenv').config()
 const passport = require('passport')
 const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
-const userSchema = require('./models/userSchema')
+const userSchema = require('./models/userAuth')
 const passportLocalMongoose = require('passport-local-mongoose')
 const GoogleStrategy = require('passport-google-oauth20').Strategy
 const GitHubStrategy = require('passport-github2').Strategy
 const findOrCreate = require('mongoose-findorcreate')
+const bodyParser = require('body-parser')
 
 mongoose.connect(process.env.DB_URI, {
   useNewUrlParser: true,
@@ -45,6 +45,7 @@ passport.use(
     {
       Name: profile.displayName,
       Password: '-1',
+      Email: profile.emails[0].value,
       googleId: profile.id,
       githubId: '-1'
     },
@@ -68,6 +69,7 @@ passport.use(
     {
       Name: profile.displayName,
       Password: '-1',
+      Email: profile.emails[0].value,
       googleId: '-1',
       githubId: profile.id
     },
