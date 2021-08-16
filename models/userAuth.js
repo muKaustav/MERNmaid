@@ -5,7 +5,8 @@ const userSchema = new mongoose.Schema({
   Email: String,
   googleId: String,
   githubId: String,
-  thumbnail: String
+  thumbnail: String,
+  details: Array
 })
 
 module.exports = userSchema

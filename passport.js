@@ -47,7 +47,8 @@ passport.use(
       Email: profile.emails[0].value,
       googleId: profile.id,
       githubId: '-1',
-      thumbnail: profile._json['picture']
+      thumbnail: profile._json['picture'],
+      details: profile._json
     },
 				(err, user) => {
   return cb(err, user)
@@ -71,7 +72,8 @@ passport.use(
       Email: profile.emails[0].value,
       googleId: '-1',
       githubId: profile.id,
-      thumbnail: profile._json['gravatar_id']
+      thumbnail: profile._json['gravatar_id'],
+      details: profile._json
     },
 				(err, user) => {
   return done(err, user)
