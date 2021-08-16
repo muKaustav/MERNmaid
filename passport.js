@@ -44,10 +44,10 @@ passport.use(
   User.findOrCreate(
     {
       Name: profile.displayName,
-      Password: '-1',
       Email: profile.emails[0].value,
       googleId: profile.id,
-      githubId: '-1'
+      githubId: '-1',
+      thumbnail: profile._json['picture']
     },
 				(err, user) => {
   return cb(err, user)
@@ -68,10 +68,10 @@ passport.use(
   User.findOrCreate(
     {
       Name: profile.displayName,
-      Password: '-1',
       Email: profile.emails[0].value,
       googleId: '-1',
-      githubId: profile.id
+      githubId: profile.id,
+      thumbnail: profile._json['picture']
     },
 				(err, user) => {
   return done(err, user)
@@ -80,41 +80,6 @@ passport.use(
 }
 	)
 )
-
-exports.register = (req, res) => {
-  User.register(
-		{ username: req.body.username },
-		req.body.password,
-		(err, user) => {
-  if (err) {
-    console.log(err)
-    res.redirect(process.env.CLIENT_SIGNUP_URL)
-  } else {
-    passport.authenticate('local')(req, res, () => {
-      res.redirect('/dashboard')
-    })
-  }
-}
-	)
-}
-
-exports.login = (req, res) => {
-  let user = new User({
-    username: req.body.username,
-    password: req.body.password
-  })
-
-  req.login(user, err => {
-    if (err) {
-      console.log(err)
-      res.redirect(process.env.CLIENT_SIGNIN_URL)
-    } else {
-      passport.authenticate('local')(req, res, () => {
-        res.redirect('/dashboard')
-      })
-    }
-  })
-}
 
 exports.logout = (req, res) => {
   req.session = null

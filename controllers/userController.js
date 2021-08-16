@@ -1,26 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const userData = require('../models/userData')
-const https = require('https')
 
 router = express.Router()
-
-exports.emailVerify = (req, res, next) => {
-  const email = req.body.username.toString()
-
-  https.get(
-		'https://api.trumail.io/v2/lookups/json?email=' + email,
-		response => {
-  response.on('data', data => {
-    const eligible = JSON.parse(data)
-    console.log(eligible)
-    if (eligible['deliverable'] === true) {
-      next()
-    }
-  })
-}
-	)
-}
 
 exports.checkUserLoggedIn = (req, res, next) => {
   if (req.user) {
@@ -31,6 +13,7 @@ exports.checkUserLoggedIn = (req, res, next) => {
 }
 
 exports.getUser = (req, res) => {
+  console.log(req.user)
   res.send(req.user)
 }
 

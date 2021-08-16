@@ -14,49 +14,19 @@ function Signup () {
             <div className='social-container'>
               <form>
                 <button className='social google' formAction='/auth/google'>
-                  <img src={googleImg} height='25' width='25' alt='google' />
-                </button>
+                  <img
+                    src={googleImg}
+                    height='30'
+                    width='30'
+                    alt='google'
+									/>Google
+								</button>
                 <button className='social github' formAction='/auth/github'>
-                  <img src={githubImg} height='25' width='25' alt='github' />
-                </button>
+                  <img src={githubImg} height='30' width='30' alt='github' />
+									GitHub
+								</button>
               </form>
             </div>
-            <h2>
-              <span>OR</span>
-            </h2>
-            <form action='/register' method='POST'>
-              <input
-                required
-                type='text'
-                placeholder='Enter Name'
-                name='name'
-							/>
-              <input
-                required
-                type='email'
-                placeholder='Enter Email'
-                name='username'
-							/>
-              <input
-                required
-                type='password'
-                placeholder='Enter Password'
-                name='password'
-							/>
-              <button className='login' type='submit'>
-								Sign up
-							</button>
-            </form>
-            <h6>
-              <a
-                href='https://www.reddit.com/r/memes/comments/ibr31t/here_have_a_cookie/'
-                className='forgot'
-                target='_blank'
-                rel='noreferrer'
-							>
-								Surprise!
-							</a>
-            </h6>
             <h5 className='createacc'>
               <span className='OR'>Already have an account? </span>
               <Link to='/login' className='create'>

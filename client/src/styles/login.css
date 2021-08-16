@@ -25,7 +25,7 @@ h1 {
     letter-spacing: -0.03em !important;
     font-weight: bold !important;
     margin: 0 !important;
-    font-size: 2.1em !important;
+    font-size: 2.3em !important;
 }
 
 h2 {
@@ -113,9 +113,10 @@ input:focus {
     align-items: center !important;
     justify-content: center !important;
     flex-direction: column !important;
-    padding: 0 50px !important;
+    padding: 100px 50px !important;
     height: 100% !important;
     text-align: center !important;
+    margin-bottom: 3em !important;
 }
 
 ::placeholder {
@@ -184,8 +185,13 @@ input:focus {
 }
 
 .social-container {
-    margin: 35px 0 !important;
-    margin-bottom: 20px !important;
+    margin: 20px 0 !important;
+    margin-bottom: 45px !important;
+}
+
+.social-container img{
+    right: 1em;
+    position: relative;
 }
 
 .social-container i{
@@ -200,13 +206,13 @@ input:focus {
     6px 6px 16px rgba(209, 205, 199, 0.5);
     border-radius: 20px;
     padding: 12px 45px;
-    font-size: 0.85em;
+    font-size: 1.4em;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px;
-    height: 40px;
-    width: 103px;
+    margin-top: 1em;
+    height: 46px;
+    width: 170px;
 }
 
 .social-container button:hover {
