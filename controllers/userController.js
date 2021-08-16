@@ -14,7 +14,7 @@ exports.emailVerify = (req, res, next) => {
   response.on('data', data => {
     const eligible = JSON.parse(data)
     console.log(eligible)
-    if (eligible['hostExists'] === true) {
+    if (eligible['deliverable'] === true) {
       next()
     }
   })
