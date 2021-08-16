@@ -83,7 +83,7 @@ passport.use(
 
 exports.register = (req, res) => {
   User.register(
-		{ email: req.body.username },
+		{ username: req.body.username },
 		req.body.password,
 		(err, user) => {
   if (err) {
@@ -100,7 +100,7 @@ exports.register = (req, res) => {
 
 exports.login = (req, res) => {
   let user = new User({
-    email: req.body.username,
+    username: req.body.username,
     password: req.body.password
   })
 
