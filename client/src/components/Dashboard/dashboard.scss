@@ -13,7 +13,7 @@
     border-radius: 3em;
     overflow: hidden;
 
-    img {
+    .stateImage {
         border-radius: 180px;
     }
 
@@ -41,4 +41,27 @@
         border: none;
         background: none;
     }
+}
+
+.Greeting{
+    position: relative;
+    margin-left: 0.5em;
+    margin-top: 7em;
+}
+
+.Greeting h1{
+    font-family: 'Product Sans';
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    color: #878787;
+}
+
+.Features{
+    position: relative;
+    margin-top: 4.5em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
 }
