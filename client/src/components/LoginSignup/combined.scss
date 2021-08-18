@@ -1,19 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background: #EFEEEE ;
-  display: flex ;
-  justify-content: center ;
-  align-items: center ;
-  flex-direction: column ;
-  font-family: 'Montserrat',
-  sans-serif ;
-  margin: auto ;
-}
-
-h1 {
+.log-in-title {
   background: linear-gradient(118.06deg, #FF2929 -145.91%, rgba(255, 130, 103, 0.59) 167.08%) ;
   -webkit-background-clip: text ;
   background-clip: text ;
@@ -25,59 +10,6 @@ h1 {
   font-weight: bold ;
   margin: 0 ;
   font-size: 2.3em ;
-}
-
-h2 {
-  width: 78% ;
-  text-align: center ;
-  font-family: 'Montserrat',
-  sans-serif ;
-  color: #ff5c3896 ;
-  font-size: 0.8em ;
-  font-weight:800 ;
-  border-bottom: 1px solid #aeaeae ;
-  line-height: 0.1em ;
-  margin: 10px 0 20px ;
-}
-
-h2 span {
-  background: #EFEEEE ;
-  padding: 0 10px ;
-}
-
-h6{
-  font-family: 'Montserrat',
-  sans-serif ;
-  color: rgba(134, 202, 224, 1) ;
-  margin-top: 2.5em ;
-  font-size: 0.75em ;
-}
-
-p {
-  font-size: 14px;
-  font-weight: 100;
-  line-height: 20px;
-  letter-spacing: 0.5px;
-  margin: 20px 0 30px;
-}
-
-span {
-  font-size: 12px;
-}
-
-input {
-  background: #EFEEEE ;
-  box-shadow: inset -6px -6px 16px rgba(255, 255, 255, 0.5),
-    inset 6px 6px 16px rgba(209, 205, 199, 0.5) ;
-  border-radius: 20px ;
-  border: 0px ;
-  padding: 12px 15px ;
-  margin: 8px 0 ;
-  width: 80% ;
-}
-
-input:focus {
-  outline: none ;
 }
 
 .forgot{

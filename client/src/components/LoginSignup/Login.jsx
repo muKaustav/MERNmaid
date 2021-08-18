@@ -1,16 +1,16 @@
 import React from 'react'
-import '../styles/login.css'
-import googleImg from '../assets/icons8-google.png'
-import githubImg from '../assets/icons8-github.png'
+import './combined.scss'
+import googleImg from '../../assets/icons8-google.png'
+import githubImg from '../../assets/icons8-github.png'
 import { Link } from 'react-router-dom'
 
-function Signup () {
+function Login () {
   return (
     <div>
       <div className='container' id='container'>
         <div className='form-container log-in-container'>
           <div className='rightpanel'>
-            <h1>Sign Up</h1>
+            <h1 className='log-in-title'>Log In</h1>
             <div className='social-container'>
               <form>
                 <button className='social google' formAction='/auth/google'>
@@ -28,9 +28,9 @@ function Signup () {
               </form>
             </div>
             <h5 className='createacc'>
-              <span className='OR'>Already have an account? </span>
-              <Link to='/login' className='create'>
-								Log In.
+              <span className='OR'>Don't have an account? </span>
+              <Link to='/register' className='create'>
+								Sign Up.
 							</Link>
             </h5>
           </div>
@@ -45,4 +45,4 @@ function Signup () {
   )
 }
 
-export default Signup
+export default Login
