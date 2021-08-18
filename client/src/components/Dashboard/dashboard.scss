@@ -4,18 +4,26 @@ body {
 
 .Navbar {
     background: #EFEEEE;
-    position: sticky;
+    position: relative;
     margin-top: 3em;
     height: 5.5em;
     width: 80vw;
     display: flex;
     align-items: center;
-    justify-content: center;
     opacity: 0.9;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 10px 10px 16px rgba(209, 205, 199, 0.5),
     -10px -10px 16px rgba(255, 255, 255, 0.5);
     border-radius: 3em;
+    overflow: hidden;
+
+    img {
+        border-radius: 180px;
+    }
+
+    .Navbar-logoBox {
+        margin: 0 auto;
+    }
 
     .Navbar-logo {
         background: linear-gradient(118.06deg, #FF2929 -145.91%, rgba(255, 130, 103, 0.59) 167.08%);
@@ -27,14 +35,13 @@ body {
         font-weight: 600;
         letter-spacing: -0.03em;
         font-weight: bold;
-        margin: 0;
         font-size: 2.3em;
-        position: absolute;
     }
 
     .Navbar-btn {
-        position: relative;
-        padding: 0;
+        position: absolute;
+        right: 1em;
+        top: 20%;
         border: none;
         background: none;
     }

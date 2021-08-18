@@ -1,33 +1,32 @@
-// import React, { useState, useEffect } from 'react'
-import React from 'react'
-// import Axios from 'axios'
+import React, { useState, useEffect } from 'react'
+import Axios from 'axios'
 import './dashboard.scss'
 
-import profile_logo from '../../assets/profile_logo.png'
-
-// let name = ''
-
 function Dashboard () {
-	// const [data, setData] = useState('')
+	const [data, setData] = useState('')
 
-	// useEffect(() => {
-	//   Axios.get('/getUser').then(response => {
-	//     name = response.data.Name.split(' ')[0]
-	//     setData(response.data)
-	//   })
-	// }, [])
+	useEffect(() => {
+	  Axios.get('/getUser').then(response => {
+	    setData(response.data)
+	  })
+	}, [])
 
   return (
     <>
       <div className='Navbar'>
-          <h1 className='Navbar-logo'>MERNmaid</h1>
+        <div className="Navbar-logoBox">
+          <h1 className="Navbar-logo">MERNmaid</h1>
+        </div>
+        <div>
           <button className='Navbar-btn'>
-          <img src={profile_logo}
+          <img src={data.thumbnail}
             alt="profile-img"
             height='50px'
             width='50px'
+            referrerPolicy="no-referrer"
             />
           </button>
+        </div>  
       </div>
     </>
   )
