@@ -18,7 +18,7 @@ function FeatureCard(props) {
       else if (props.FeatureName === 'Calendar') {
         setFeatureImgLink(calendar)
       }
-      else if (props.FeatureName === 'Todo') {
+      else if (props.FeatureName === 'To-do') {
         setFeatureImgLink(todo)
       }
       else {
@@ -38,7 +38,7 @@ function FeatureCard(props) {
             backgroundSize: 'cover'
           }}
 				/>
-        <div className='FeatureCardHeader'>
+        <div className='FeatureCardContent'>
           <img src={featureImgLink} alt={props.FeatureName} />
           <h1>{props.FeatureName}</h1>
         </div>

@@ -43,12 +43,12 @@
     }
 }
 
-.Greeting{
+.Greeting {
     position: relative;
     margin-left: 0.5em;
     margin-top: 7em;
 
-    .Greeting h1{
+    .Greeting-text {
         font-family: 'Product Sans';
         font-weight: normal;
         font-size: 40px;
@@ -58,7 +58,7 @@
     }
 }
 
-.Features{
+.Features {
     position: relative;
     margin-top: 4.5em;
     display: flex;

@@ -33,12 +33,12 @@ function Dashboard() {
         </div>  
       </div>
       <div className="Greeting">
-        <h1>Hello {name}</h1>
+        <h1 className="Greeting-text">Hey {name}</h1>
       </div>
       <div className="Features">
         <FeatureCard className='feature' FeatureName='Meet'/>
         <FeatureCard className='feature' FeatureName='Calendar'/>
-        <FeatureCard className='feature' FeatureName='Todo'/>
+        <FeatureCard className='feature' FeatureName='To-do'/>
         <FeatureCard className='feature' FeatureName='Whiteboard'/>
       </div>
     </>
