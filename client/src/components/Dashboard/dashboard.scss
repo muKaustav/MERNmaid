@@ -11,7 +11,7 @@
     box-shadow: 10px 10px 16px rgba(209, 205, 199, 0.5),
     -10px -10px 16px rgba(255, 255, 255, 0.5);
     border-radius: 3em;
-    overflow: hidden;
+    // overflow: hidden;
 
     .stateImage {
         border-radius: 180px;
@@ -40,6 +40,22 @@
         top: 20%;
         border: none;
         background: none;
+    }
+
+    .dropdown {
+        position: relative;
+        height: 30vh;
+        width: 2em;
+        // right: 10vw;
+        top: 8.5em;
+        // left: -100%;
+        transition: 350ms;
+        visibility: hidden;
+    }
+    
+    .active {
+        visibility: visible;
+        // transition: 350ms;
     }
 }
 
