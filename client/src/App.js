@@ -10,9 +10,11 @@ function App () {
   return (
     <BrowserRouter>
       <Switch>
+        {/* important routes */}
         <Route path='/dashboard' exact component={Dashboard} />
         <Route path='/login' exact component={Login} />
         <Route path='/register' exact component={Signup} />
+        {/* component testing route */}
         <Route path='/test' exact component={FeatureCard} />
       </Switch>
     </BrowserRouter>
