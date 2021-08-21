@@ -50,21 +50,24 @@
 	position: relative;
 	float: right;
 	visibility: hidden;
-	top: 1.4em;
+	top: 1.5em;
+	border-radius: 22px;
+	padding: 0.2em;
 }
 
 .Active {
 	width: 220px;
 	background: #efeeee;
-	box-shadow: -4px -4px 16px rgba(255, 255, 255, 0.5),
-		4px 4px 16px rgba(209, 205, 199, 0.5);
+	box-shadow: -10px -10px 16px rgba(255, 255, 255, 0.5),
+		10px 10px 16px rgba(209, 205, 199, 0.5);
 	border-radius: 22px;
 	visibility: visible;
-	transition: 350ms;
+	transition: 200ms;
 }
 
 .DropdownContent {
 	margin-left: 1.2em;
+	width: 0;
 	position: relative;
 	display: flex;
 	flex-direction: row;
@@ -75,12 +78,13 @@
 	font-family: 'Product Sans';
 	font-style: normal;
 	font-weight: normal;
-	font-size: 30px;
+	font-size: 25px;
 	letter-spacing: 0.01em;
-	color: #f78c8c;
+	color: #aeaeae;
 	margin: 0;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 0.3em;
 }
 
 .Greeting {
