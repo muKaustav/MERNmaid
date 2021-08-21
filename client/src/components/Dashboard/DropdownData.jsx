@@ -14,7 +14,7 @@ function DropdownData () {
           <h1>Profile</h1>
       </Link>
       
-      <Link className='DropdownContent' key='Support' to='/feedback'>
+      <Link className='DropdownContent' key='Feedback' to='/feedback'>
           <img src={feedbackImg} alt='img' />
           <h1>Feedback</h1>
       </Link>
@@ -24,7 +24,7 @@ function DropdownData () {
           <h1>Support</h1>
       </Link>
 
-      <Link className='DropdownContent' key='Support' to='/logout'>
+      <Link className='DropdownContent' key='Logout' to='/logout'>
           <img src={logoutImg} alt='img' />
           <h1>Logout</h1>
       </Link>
