@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const userSchema = require('./models/userAuth')
 const passportLocalMongoose = require('passport-local-mongoose')
 const GoogleStrategy = require('passport-google-oauth20').Strategy
-const GitHubStrategy = require('passport-github2').Strategy
+const FacebookStrategy = require('passport-facebook').Strategy
 const findOrCreate = require('mongoose-findorcreate')
 const bodyParser = require('body-parser')
 
@@ -46,7 +46,7 @@ passport.use(
       Name: profile.displayName,
       Email: profile.emails[0].value,
       googleId: profile.id,
-      githubId: '-1',
+      facebookId: '-1',
       thumbnail: profile._json['picture']
     },
 				(err, user) => {
@@ -58,23 +58,23 @@ passport.use(
 )
 
 passport.use(
-	new GitHubStrategy(
+	new FacebookStrategy(
   {
-    clientID: process.env.GITHUB_CLIENT_ID,
-    clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: process.env.GITHUB_CALLBACK_URL
+    clientID: process.env.FACEBOOK_CLIENT_ID,
+    clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+    callbackURL: process.env.FACEBOOK_CALLBACK_URL
   },
-		(accessToken, refreshToken, profile, done) => {
+		(accessToken, refreshToken, profile, cb) => {
   User.findOrCreate(
     {
       Name: profile.displayName,
       Email: profile.emails[0].value,
       googleId: '-1',
-      githubId: profile.id,
-      thumbnail: profile._json['avatar_url']
+      facebookId: profile.id,
+      thumbnail: profile._json['picture']
     },
 				(err, user) => {
-  return done(err, user)
+  return cb(err, user)
 }
 			)
 }
