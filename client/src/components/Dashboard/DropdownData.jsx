@@ -1,30 +1,35 @@
-import React from 'react';
-import * as CgIcons from "react-icons/cg";
+import React from 'react'
+import profileImg from './DropdownAssets/profile.png'
+import supportImg from './DropdownAssets/support.png'
+import feedbackImg from './DropdownAssets/feedback.png'
+import logoutImg from './DropdownAssets/logout.png'
+import { Link } from 'react-router-dom'
+import './dashboard.scss'
 
+function DropdownData () {
+  return (
+    <>
+      <Link className='DropdownContent' key='Profile' to='/profile'>
+          <img src={profileImg} alt='img' />
+          <h1>Profile</h1>
+      </Link>
+      
+      <Link className='DropdownContent' key='Feedback' to='/feedback'>
+          <img src={feedbackImg} alt='img' />
+          <h1>Feedback</h1>
+      </Link>
 
-export const DropdownData = [
-  {
-    title: "Profile",
-    path: "/",
-    icon: <CgIcons.CgProfile />,
-    cName: "profile",
-  },
-  {
-    title: "Support",
-    path: "/",
-    icon: <CgIcons.CgProfile />,
-    cName: "support",
-  },
-  {
-    title: "Feedback",
-    path: "/",
-    icon: <CgIcons.CgProfile />,
-    cName: "feedback",
-  },
-  {
-    title: "Logout",
-    path: "/",
-    icon: <CgIcons.CgProfile />,
-    cName: "logout",
-  }
-];
+      <Link className='DropdownContent' key='Support' to='/support'>
+          <img src={supportImg} alt='img' />
+          <h1>Support</h1>
+      </Link>
+
+      <Link className='DropdownContent' key='Logout' to='/logout'>
+          <img src={logoutImg} alt='img' />
+          <h1>Logout</h1>
+      </Link>
+    </>
+  )
+}
+
+export default DropdownData

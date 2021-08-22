@@ -1,83 +1,111 @@
 .Navbar {
-    background: #EFEEEE;
-    position: relative;
-    margin-top: 3em;
-    height: 5.5em;
-    width: 80vw;
-    display: flex;
-    align-items: center;
-    opacity: 0.9;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 10px 10px 16px rgba(209, 205, 199, 0.5),
-    -10px -10px 16px rgba(255, 255, 255, 0.5);
-    border-radius: 3em;
-    // overflow: hidden;
+	background: #efeeee;
+	position: relative;
+	margin-top: 3em;
+	height: 5.5em;
+	width: 80vw;
+	display: flex;
+	align-items: center;
+	opacity: 0.9;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 10px 10px 16px rgba(209, 205, 199, 0.5),
+		-10px -10px 16px rgba(255, 255, 255, 0.5);
+	border-radius: 3em;
 
-    .stateImage {
-        border-radius: 180px;
-    }
+	.stateImage {
+		border-radius: 180px;
+	}
 
-    .Navbar-logoBox {
-        margin: 0 auto;
-    }
+	.Navbar-logoBox {
+		margin: 0 auto;
+	}
 
-    .Navbar-logo {
-        background: linear-gradient(118.06deg, #FF2929 -145.91%, rgba(255, 130, 103, 0.59) 167.08%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-family: SF Pro Text;
-        font-style: normal;
-        font-weight: 600;
-        letter-spacing: -0.03em;
-        font-weight: bold;
-        font-size: 2.3em;
-    }
+	.Navbar-logo {
+		background: linear-gradient(
+			118.06deg,
+			#ff2929 -145.91%,
+			rgba(255, 130, 103, 0.59) 167.08%
+		);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-family: SF Pro Text;
+		font-style: normal;
+		font-weight: 600;
+		letter-spacing: -0.03em;
+		font-weight: bold;
+		font-size: 2.3em;
+	}
 
-    .Navbar-btn {
-        position: absolute;
-        right: 1em;
-        top: 20%;
-        border: none;
-        background: none;
-    }
+	.Navbar-btn {
+		position: absolute;
+		right: 1em;
+		top: 20%;
+		border: none;
+		background: none;
+	}
+}
 
-    .dropdown {
-        position: relative;
-        height: 30vh;
-        width: 2em;
-        // right: 10vw;
-        top: 8.5em;
-        // left: -100%;
-        transition: 350ms;
-        visibility: hidden;
-    }
-    
-    .active {
-        visibility: visible;
-        // transition: 350ms;
-    }
+.Dropdown {
+	position: relative;
+	float: right;
+	visibility: hidden;
+	top: 1.5em;
+	border-radius: 22px;
+	padding: 0.2em;
+}
+
+.Active {
+	width: 220px;
+	background: #efeeee;
+	box-shadow: -10px -10px 16px rgba(255, 255, 255, 0.5),
+		10px 10px 16px rgba(209, 205, 199, 0.5);
+	border-radius: 22px;
+	visibility: visible;
+	transition: 200ms;
+}
+
+.DropdownContent {
+	margin-left: 1.2em;
+	width: 0;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.DropdownContent h1 {
+	font-family: 'Product Sans';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	letter-spacing: 0.01em;
+	color: #aeaeae;
+	margin: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 0.3em;
 }
 
 .Greeting {
-    position: relative;
-    margin-left: 0.5em;
-    margin-top: 7em;
+	position: relative;
+	margin-left: 0.5em;
+	margin-top: 7em;
 
-    .Greeting-text {
-        font-family: 'Product Sans';
-        font-weight: normal;
-        font-size: 40px;
-        line-height: 36px;
-        letter-spacing: 0.01em;
-        color: #878787;
-    }
+	.Greeting-text {
+		font-family: 'Product Sans';
+		font-weight: normal;
+		font-size: 40px;
+		line-height: 36px;
+		letter-spacing: 0.01em;
+		color: #878787;
+	}
 }
 
 .Features {
-    position: relative;
-    margin-top: 4.5em;
-    display: flex;
-    flex-wrap: wrap;
-    width: 50vw;
+	position: relative;
+	margin-top: 4.5em;
+	display: flex;
+	flex-wrap: wrap;
+	width: 50vw;
 }

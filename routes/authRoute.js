@@ -24,15 +24,15 @@ router.get(
 /* GitHub OAuth route SESSION */
 
 router.get(
-	'/auth/github',
-	passport.authenticate('github', { scope: ['user:email'] })
+	'/auth/facebook',
+	passport.authenticate('facebook', { scope: ['user:email'] })
 )
 
-/* GitHub OAuth route callback SESSION */
+/* Facebook OAuth route callback SESSION */
 
 router.get(
-	'/auth/github/dashboard',
-	passport.authenticate('github', { failureRedirect: '/failed' }),
+	'/auth/facebook/dashboard',
+	passport.authenticate('facebook', { failureRedirect: '/failed' }),
 	(req, res) => {
   res.redirect('/dashboard')
 }
@@ -42,8 +42,8 @@ router.get(
 
 router.post('/auth/android/google', authRoute.googlePost)
 
-/* GitHub OAuth route MOBILE */
+/* Facebook OAuth route MOBILE */
 
-router.post('/auth/android/github', authRoute.githubPost)
+router.post('/auth/android/facebook', authRoute.facebookPost)
 
 module.exports = router

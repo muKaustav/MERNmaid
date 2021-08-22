@@ -13,7 +13,7 @@ exports.googlePost = (req, res) => {
           Name: req.body.username,
           Email: req.body.email,
           googleId: req.body.googleId,
-          githubId: '-1',
+          facebookId: '-1',
           thumbnail: req.body.thumbnail
         })
         newUser.save(err => {
@@ -30,10 +30,10 @@ exports.googlePost = (req, res) => {
   })
 }
 
-exports.githubPost = (req, res) => {
+exports.facebookPost = (req, res) => {
   const User = mongoose.model('User', userSchema)
 
-  User.findOne({ githubId: req.body.githubId }, (err, user) => {
+  User.findOne({ facebookId: req.body.facebookId }, (err, user) => {
     if (err) {
       res.send(err)
     } else {
@@ -42,18 +42,18 @@ exports.githubPost = (req, res) => {
           Name: req.body.username,
           Email: req.body.email,
           googleId: '-1',
-          githubId: req.body.githubId,
+          facebookId: req.body.facebookId,
           thumbnail: req.body.thumbnail
         })
         newUser.save(err => {
           if (err) {
             console.log(err)
           } else {
-            res.send(req.body.githubId)
+            res.send(req.body.facebookId)
           }
         })
       } else {
-        res.send(req.body.githubId)
+        res.send(req.body.facebookId)
       }
     }
   })

@@ -1,7 +1,7 @@
 import React from 'react'
 import './combined.scss'
 import googleImg from '../../assets/icons8-google.png'
-import githubImg from '../../assets/icons8-github.png'
+import facebookImg from '../../assets/icons8-facebook.png'
 import { Link } from 'react-router-dom'
 
 function Signup () {
@@ -21,9 +21,14 @@ function Signup () {
                     alt='google'
 									/>Google
 								</button>
-                <button className='social github' formAction='/auth/github'>
-                  <img src={githubImg} height='30' width='30' alt='github' />
-									GitHub
+                <button className='social facebook' formAction='/auth/facebook'>
+                  <img
+                    src={facebookImg}
+                    height='30'
+                    width='30'
+                    alt='facebook'
+									/>
+									Facebook
 								</button>
               </form>
             </div>
