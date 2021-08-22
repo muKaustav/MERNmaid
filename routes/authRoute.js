@@ -25,14 +25,14 @@ router.get(
 
 router.get(
 	'/auth/facebook',
-	passport.authenticate('github', { scope: ['user:email'] })
+	passport.authenticate('facebook', { scope: ['user:email'] })
 )
 
 /* Facebook OAuth route callback SESSION */
 
 router.get(
 	'/auth/facebook/dashboard',
-	passport.authenticate('github', { failureRedirect: '/failed' }),
+	passport.authenticate('facebook', { failureRedirect: '/failed' }),
 	(req, res) => {
   res.redirect('/dashboard')
 }

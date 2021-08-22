@@ -65,6 +65,7 @@ passport.use(
     callbackURL: process.env.FACEBOOK_CALLBACK_URL
   },
 		(accessToken, refreshToken, profile, cb) => {
+  console.log(profile)
   User.findOrCreate(
     {
       Name: profile.displayName,
