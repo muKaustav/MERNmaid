@@ -63,12 +63,7 @@ passport.use(
     clientID: process.env.FACEBOOK_CLIENT_ID,
     clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
     callbackURL: process.env.FACEBOOK_CALLBACK_URL,
-    profileFields: [
-      'id',
-      'picture.type(large)',
-      'emails',
-      'displayName'
-    ]
+    profileFields: ['id', 'picture.type(large)', 'emails', 'displayName']
   },
 		(accessToken, refreshToken, profile, cb) => {
   console.log(profile)
@@ -78,7 +73,7 @@ passport.use(
       Email: profile.emails[0].value,
       googleId: '-1',
       facebookId: profile.id,
-      thumbnail: profile.picture
+      thumbnail: profile.photos[0].value
     },
 				(err, user) => {
   return cb(err, user)
