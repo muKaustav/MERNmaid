@@ -65,7 +65,6 @@ passport.use(
     callbackURL: process.env.FACEBOOK_CALLBACK_URL,
     profileFields: [
       'id',
-      'name',
       'picture.type(large)',
       'emails',
       'displayName'

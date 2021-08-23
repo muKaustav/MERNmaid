@@ -23,7 +23,10 @@ router.get(
 
 /* GitHub OAuth route SESSION */
 
-router.get('/auth/facebook', passport.authenticate('facebook'))
+router.get(
+	'/auth/facebook',
+	passport.authenticate('facebook', { scope: ['email'] })
+)
 
 /* Facebook OAuth route callback SESSION */
 
