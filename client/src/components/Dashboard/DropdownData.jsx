@@ -24,7 +24,10 @@ function DropdownData () {
           <h1>Support</h1>
       </Link>
 
-      <Link className='DropdownContent' key='Logout' to='/logout'>
+      <Link className='DropdownContent' key='Logout'
+        onClick={() => {
+        window.location.href = 'http://localhost:5000/logout'
+      }}>
           <img src={logoutImg} alt='img' />
           <h1>Logout</h1>
       </Link>
