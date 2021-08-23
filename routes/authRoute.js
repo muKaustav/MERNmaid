@@ -21,7 +21,7 @@ router.get(
 }
 )
 
-/* GitHub OAuth route SESSION */
+/* Facebook OAuth route SESSION */
 
 router.get(
 	'/auth/facebook',
