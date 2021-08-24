@@ -25,7 +25,11 @@ function Dashboard() {
           <h1 className="Navbar-logo">MERNmaid</h1>
         </div>
         <div>
-          <button className="Navbar-btn" onClick={showDropdown}>
+          <button
+            className="Navbar-btn"
+            onFocus={showDropdown}
+            onBlur={showDropdown}
+          >
             <img
               className="stateImage"
               src={stateImage}
