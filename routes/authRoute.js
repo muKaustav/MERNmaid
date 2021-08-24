@@ -21,11 +21,11 @@ router.get(
 }
 )
 
-/* GitHub OAuth route SESSION */
+/* Facebook OAuth route SESSION */
 
 router.get(
 	'/auth/facebook',
-	passport.authenticate('facebook', { scope: ['user:email'] })
+	passport.authenticate('facebook', { scope: ['email'] })
 )
 
 /* Facebook OAuth route callback SESSION */

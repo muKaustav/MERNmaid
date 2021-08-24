@@ -38,7 +38,7 @@ passport.use(
   {
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: process.env.GOOGLE_CALLBACK_URL
+    callbackURL: process.env.LOCAL_GOOGLE_CALLBACK_URL
   },
 		(accessToken, refreshToken, profile, cb) => {
   User.findOrCreate(
@@ -63,13 +63,7 @@ passport.use(
     clientID: process.env.FACEBOOK_CLIENT_ID,
     clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
     callbackURL: process.env.FACEBOOK_CALLBACK_URL,
-    profileFields: [
-      'id',
-      'name',
-      'picture.type(large)',
-      'emails',
-      'displayName'
-    ]
+    profileFields: ['id', 'picture.type(large)', 'emails', 'displayName']
   },
 		(accessToken, refreshToken, profile, cb) => {
   console.log(profile)
@@ -79,7 +73,7 @@ passport.use(
       Email: profile.emails[0].value,
       googleId: '-1',
       facebookId: profile.id,
-      thumbnail: profile.picture
+      thumbnail: profile.photos[0].value
     },
 				(err, user) => {
   return cb(err, user)
