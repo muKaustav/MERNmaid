@@ -38,9 +38,9 @@ passport.use(
   {
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: process.env.GOOGLE_CALLBACK_URL
+    callbackURL: process.env.LOCAL_GOOGLE_CALLBACK_URL
   },
-		(accessToken, refreshToken, profile, cb) => {
+		(accessToken, refreshToken, profile, done) => {
   User.findOrCreate(
     {
       Name: profile.displayName,
@@ -50,7 +50,7 @@ passport.use(
       thumbnail: profile._json['picture']
     },
 				(err, user) => {
-  return cb(err, user)
+  return done(err, user)
 }
 			)
 }
@@ -66,7 +66,6 @@ passport.use(
     profileFields: ['id', 'picture.type(large)', 'emails', 'displayName']
   },
 		(accessToken, refreshToken, profile, cb) => {
-  console.log(profile)
   User.findOrCreate(
     {
       Name: profile.displayName,

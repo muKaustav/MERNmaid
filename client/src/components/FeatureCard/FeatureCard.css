@@ -1,0 +1,45 @@
+.FeatureCard {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 337px;
+  height: 207px;
+  margin: 0.5em;
+  background: #efeeee;
+  -webkit-box-shadow: -4px -4px 16px rgba(255, 255, 255, 0.5), 4px 4px 16px rgba(209, 205, 199, 0.5);
+          box-shadow: -4px -4px 16px rgba(255, 255, 255, 0.5), 4px 4px 16px rgba(209, 205, 199, 0.5);
+  border-radius: 22px;
+}
+
+.FeatureCard .FeatureCardContent {
+  margin-top: 1.65em;
+  margin-left: 1.4em;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.FeatureCard .FeatureCardContent h1 {
+  margin-left: 0.5em;
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  color: #f78c8c;
+}
+/*# sourceMappingURL=FeatureCard.css.map */

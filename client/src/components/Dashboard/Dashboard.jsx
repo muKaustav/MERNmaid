@@ -12,10 +12,14 @@ function Dashboard () {
   const showDropdown = () => setDropdown(!dropdown)
 
   let menuRef = useRef()
+  let buttonRef = useRef()
 
   useEffect(() => {
     let handler = event => {
-      if (!menuRef.current.contains(event.target)) {
+      if (
+				!menuRef.current.contains(event.target) &&
+				!buttonRef.current.contains(event.target)
+			) {
         setDropdown(false)
       }
     }
@@ -39,7 +43,7 @@ function Dashboard () {
           <h1 className='Navbar-logo'>MERNmaid</h1>
         </div>
         <div>
-          <button className='Navbar-btn' onClick={showDropdown}>
+          <button ref={buttonRef} className='Navbar-btn' onClick={showDropdown}>
             <img
               className='stateImage'
               src={stateImage}
