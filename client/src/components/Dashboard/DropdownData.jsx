@@ -9,7 +9,10 @@ import "./dashboard.scss";
 function DropdownData() {
   return (
     <>
-      <Link className="DropdownContent" key="Profile" to="/profile">
+      <Link className="DropdownContent" key="Profile"
+        onClick={() => {
+          window.location.href = "http://localhost:3000/profile";
+        }}>
         <img src={profileImg} alt="img" />
         <h1>Profile</h1>
       </Link>
