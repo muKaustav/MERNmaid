@@ -28,7 +28,7 @@ function DropdownData() {
         className="DropdownContent"
         key="Logout"
         onClick={() => {
-          window.location.href = "https://mernmaid.herokuapp.com//logout";
+          window.location.href = "https://mernmaid.herokuapp.com/logout";
         }}
       >
         <img src={logoutImg} alt="img" />
